@@ -3,12 +3,13 @@ methods that I edited/found useful and want to keep for easy reusing
 # How to use: 
 ```
 import Engch as ec;
-engch_pandas_lib = ec.Pandaslibrary()
-engch_lib = ec.Library()
-df = pd.read_csv(file_name)
 ```
 ## class Pandaslibrary:
 Welcome to Engch's Pandas Library
+```
+engch_pandas_lib = ec.Pandaslibrary()
+df = pd.read_csv(file_name)
+```
 ### def get_csv_header_only(self, file_name):
 ```
 df_header = ec.get_csv_header_only("file_name")
@@ -26,10 +27,33 @@ dt_dates = ec.df_sort_by_month(df, "column header named: date")
 ``` 
 simplified_df = ec.simplified_by_end_of_month(df, dt_dates)
 ```
+## class TimerLibrary: 
+Welcome to Engch's Timer Library
+```
+engch_timer_lib = ec.TimerLibrary()
+```
+### def time(self):
+```
+start = engch_timer_lib.time()
+# toDo codes..
+end = engch_timer_lib.time()
+print(end - start)
+```
+### def time_ns(self):
+```
+start = engch_timer_lib.time_ns()
+# toDo codes..
+end = engch_timer_lib.time_ns()
+print(end - start)
+```
+### def sleep(self, duration):
+```
+engch_timer_lib.sleep(int seconds)
+```
 ## class Library:
 Welcome to Engch's Library
 ```
 import Engch as ec;
 engch_lib = ec.Library()
 ```
-### 
+
