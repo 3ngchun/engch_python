@@ -1,3 +1,4 @@
+import time
 import pandas as pd
 import datetime as dt
 
@@ -62,6 +63,35 @@ class Pandaslibrary:
         return data_set
 
 
+class TimerLibrary:
+    """
+    Welcome to Engch's Timer Library
+    """
+
+    def __init__(self):
+        """
+        Engch's Timer Library attributes
+        """
+        self.banner = "Welcome to Engch's Timer Library"
+
+    def time(self):
+        """
+        return timer in second \n
+        ref: https://www.youtube.com/watch?v=qUeud6DvOWI
+        """
+        return time.perf_counter()  # start/end timer
+
+    def time_ns(self):
+        """
+        return timer in nanosecond
+        """
+        return time.perf_counter_ns()  # start/end timer
+
+    def sleep(self, duration):
+        """ delay action for x seconds """
+        time.sleep(duration)
+
+
 class Library:
     """
     Welcome to Engch's Library
@@ -75,6 +105,11 @@ class Library:
 
 
 if __name__ == '__main__':
+    """ 
+    toDo:
+    1. convert to package
+    """
     # engch_pandas_lib = Pandaslibrary()
+    # engch_timer_lib = TimerLibrary()
     # engch_lib = Library()
     pass
